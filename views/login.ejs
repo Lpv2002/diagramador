@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+	<link rel="stylesheet" href="resources/css/login.css">
+	<link rel="shortcut icon" href="resources/css/logoFICCT.jpg" type="image/x-icon">
+</head>
+<body>
+	
+	<div class="login-form">
+		<h1>DIAGRAMA DE CLASE</h1>
+		<h2>Iniciar Sesión</h2>
+		<form action="auth" method="POST">
+			<input type="text" name="user" placeholder="Usuario" autofocus required>
+			<input type="password" name="pass" placeholder="Contraseña" required>
+			<input type="submit" class="btn-login" value="Acceder">
+		</form>
+		<br>
+		<button class="btn-register">
+			<a href="register">Crear cuenta</a>
+		</button>
+				
+		
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+		<% if (typeof alert != "undefined")  { %>
+			<script>
+			Swal.fire({
+			title:'<%= alertTitle %>',
+			text:'<%= alertMessage %>',
+			icon:'<%= alertIcon %>',
+			showConfirmButton: '<%= showConfirmButton %>',
+			timer: '<%= timer %>'
+			}).then(()=>{
+				window.location='<%= ruta %>'
+			})
+			</script>
+		<% } %>
+	</div>
+	<div class="imagen">
+	</div>
+</body>
+</html>
